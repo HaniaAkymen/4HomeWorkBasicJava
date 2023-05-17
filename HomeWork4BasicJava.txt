@@ -1,0 +1,127 @@
+package Lesson4;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class HomeWork4 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите два слова с клавиатуры, состоящие из 4 букв");
+        String word1 = scan.nextLine();
+        String word2 = scan.nextLine();
+        System.out.println(word1.substring(0,2) + word2.substring(2));
+
+    }
+}
+
+'Номер2'
+
+package Lesson4;
+
+public class MethodHomeWork {
+
+    public static void main(String[] args) {
+
+        int result = sumTwoNumbers(3,7);
+        System.out.println("Результат сложения равен " + result);
+
+        int result2 = subTwoNumbers(78,35);
+        System.out.println("Результат вычитания равен  " + result2);
+
+        System.out.println("Результат умножения равен " + mulTwoNumbers(2,5));
+
+        System.out.println("Результат деления равен " + divTwoNumbers(25,5));
+
+    }
+
+    public static int sumTwoNumbers(int first, int second){
+        int sum = first + second;
+        System.out.println("Вычислим сумму числа " + first + " и числа " + second);
+        return sum;
+    }
+    public static int subTwoNumbers(int a, int b){
+        int sub = a - b;
+        System.out.println("Отнимим от числа " + a + " число " + b);
+        return sub;
+    }
+    public static int mulTwoNumbers (int c, int d){
+        System.out.println("Умножим число " + c + " на число " + d);
+        return c * d;
+    }
+    public static int divTwoNumbers (int f, int k){
+        System.out.println("Разделим число " + f + " на число " + k);
+        return f / k;
+
+
+    }
+}
+
+'Номер3'
+
+ackage Lesson4;
+
+import javax.sound.midi.Soundbank;
+import java.util.Scanner;
+
+public class Converter {
+    public static void main(String[] args) {
+        System.out.println("Введите сумму в доллара США");
+        Scanner scr = new Scanner(System.in);
+        int eur = scr.nextInt();
+        System.out.println("Сумма в Евро равна " + (convertDolEur(eur, (double)1.08)));
+
+    }
+    public static double convertDolEur (double dol, double difference){
+       return dol/difference;
+    }
+}
+
+'Номер4'
+
+package Lesson4.task5;
+
+import Lesson4.task5.Calories;
+
+public class Calories {
+    public static void main(String[] args) {
+
+        double sLittle = mulTwoNumbers24(12, (3.14));
+        System.out.println("Площадь пиццы диаметром 24 см равна " + sLittle + " см^2");
+
+        double sBig = mulTwoNumbers28(14, (3.14));
+        System.out.println("Площадь пиццы диаметром 28 см равна " + sBig + " см^2");
+
+        double ePizzaLittle = sumCalPizzaLittle(sLittle, 40);
+        System.out.println("Каллорийность пиццы диаметром 24 см равна " + ePizzaLittle + " каллорий");
+
+        double ePizzaBig = sumCalPizzaBig(sBig, 40);
+        System.out.println("Каллорийность пиццы диаметром 28 см равна " + ePizzaBig + " каллорий");
+
+        double ExCalories = subCal(ePizzaBig, ePizzaLittle);
+        System.out.println("Если мы закажем пиццу 28 см вместо пиццы 24 см, мы съедим на " + ExCalories + " каллорий больше! Не будь толстым! Ещь меньше пиццы!" );
+
+    }
+      public static double mulTwoNumbers24(double r1, double p){
+       double mult24 = p*(r1*r1);
+        return mult24;
+     }
+     public static double mulTwoNumbers28(double r1, double p){
+        double mult28 = p*(r1*r1);
+        return mult28;
+    }
+    public static double sumCalPizzaLittle(double sLittle, double sm2){
+        double sumE = sLittle * sm2;
+        return sumE;
+        }
+    public static double sumCalPizzaBig(double sBig, double sm2){
+        double sumE2 = sBig * sm2;
+        return sumE2;
+    }
+    public static double subCal(double ePizzaBig, double ePizzaLittle){
+        double subPizzas = ePizzaBig - ePizzaLittle;
+        return subPizzas;
+        }
+    }
+
+
